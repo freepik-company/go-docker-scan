@@ -1,0 +1,434 @@
+{
+  "vulnerabilities": [
+    {
+      "id": "SNYK-ALPINE317-CURL-3179543",
+      "cpes": [],
+      "title": "Cleartext Transmission of Sensitive Information",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "credit": [
+        ""
+      ],
+      "semver": {
+        "vulnerable": [
+          "<7.87.0-r0"
+        ]
+      },
+      "exploit": "Not Defined",
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "linux",
+      "severity": "high",
+      "cvssScore": 7.5,
+      "malicious": false,
+      "references": [
+        {
+          "url": "https://hackerone.com/reports/1755083",
+          "title": "MISC"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/TVWZW5CNSJ7UYAF2BGSYAWAEXDJYUBHA/",
+          "title": "FEDORA"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/TVWZW5CNSJ7UYAF2BGSYAWAEXDJYUBHA/",
+          "title": "MISC"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2022-12-21T15:51:21.493441Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+          "cvssV3BaseScore": 6.5,
+          "modificationTime": "2022-12-22T11:01:35.742604Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2023-01-05T01:10:44.463860Z"
+        }
+      ],
+      "description": "## NVD Description\n**_Note:_** _Versions mentioned in the description apply to the upstream `curl` package._\n_See `How to fix?` for `Alpine:3.17` relevant versions._\n\nA vulnerability exists in curl &lt;7.87.0 HSTS check that could be bypassed to trick it to keep using HTTP. Using its HSTS support, curl can be instructed to use HTTPS instead of using an insecure clear-text HTTP step even when HTTP is provided in the URL. However, the HSTS mechanism could be bypassed if the host name in the given URL first uses IDN characters that get replaced to ASCII counterparts as part of the IDN conversion. Like using the character UTF-8 U+3002 (IDEOGRAPHIC FULL STOP) instead of the common ASCII full stop (U+002E) `.`. Then in a subsequent request, it does not detect the HSTS state and makes a clear text transfer. Because it would store the info IDN encoded but look for it IDN decoded.\n## Remediation\nUpgrade `Alpine:3.17` `curl` to version 7.87.0-r0 or higher.\n## References\n- [MISC](https://hackerone.com/reports/1755083)\n- [FEDORA](https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/TVWZW5CNSJ7UYAF2BGSYAWAEXDJYUBHA/)\n- [MISC](https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/TVWZW5CNSJ7UYAF2BGSYAWAEXDJYUBHA/)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2022-43551"
+        ],
+        "CWE": [],
+        "ALTERNATIVE": []
+      },
+      "nvdSeverity": "high",
+      "packageName": "curl",
+      "creationTime": "2022-12-21T14:18:36.098379Z",
+      "disclosureTime": "2022-12-23T15:15:00Z",
+      "packageManager": "alpine:3.17",
+      "publicationTime": "2022-12-21T14:17:48.491824Z",
+      "modificationTime": "2023-01-05T01:10:44.481869Z",
+      "socialTrendAlert": false,
+      "relativeImportance": null,
+      "severityWithCritical": "high",
+      "from": [
+        "docker-image|php@fpm-alpine3.17",
+        "curl/curl@7.86.0-r1"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "curl/curl",
+      "version": "7.86.0-r1",
+      "nearestFixedInVersion": "7.87.0-r0"
+    },
+    {
+      "id": "SNYK-ALPINE317-CURL-3179544",
+      "cpes": [],
+      "title": "CVE-2022-43552",
+      "CVSSv3": null,
+      "credit": [
+        ""
+      ],
+      "semver": {
+        "vulnerable": [
+          "<7.87.0-r0"
+        ]
+      },
+      "exploit": "Not Defined",
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "linux",
+      "severity": "low",
+      "cvssScore": null,
+      "malicious": false,
+      "references": [],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 5.9,
+          "modificationTime": "2022-12-21T14:08:07.919105Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+          "cvssV3BaseScore": 5.6,
+          "modificationTime": "2022-12-22T11:01:35.887584Z"
+        }
+      ],
+      "description": "## NVD Description\n_This vulnerability has not been analyzed by NVD yet._\n\n## Remediation\nUpgrade `Alpine:3.17` `curl` to version 7.87.0-r0 or higher.\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2022-43552"
+        ],
+        "CWE": [],
+        "ALTERNATIVE": []
+      },
+      "nvdSeverity": null,
+      "packageName": "curl",
+      "creationTime": "2022-12-21T14:18:38.535678Z",
+      "disclosureTime": null,
+      "packageManager": "alpine:3.17",
+      "publicationTime": "2022-12-21T14:18:10.049726Z",
+      "modificationTime": "2022-12-22T11:01:35.887584Z",
+      "socialTrendAlert": false,
+      "relativeImportance": null,
+      "severityWithCritical": "low",
+      "from": [
+        "docker-image|php@fpm-alpine3.17",
+        "curl/curl@7.86.0-r1"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "curl/curl",
+      "version": "7.86.0-r1",
+      "nearestFixedInVersion": "7.87.0-r0"
+    },
+    {
+      "id": "SNYK-ALPINE317-OPENSSL-3188632",
+      "cpes": [],
+      "title": "Improper Locking",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "credit": [
+        ""
+      ],
+      "semver": {
+        "vulnerable": [
+          "<3.0.7-r2"
+        ]
+      },
+      "exploit": "Not Defined",
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "linux",
+      "severity": "high",
+      "cvssScore": 7.5,
+      "malicious": false,
+      "references": [
+        {
+          "url": "https://github.com/openssl/openssl/commit/7725e7bfe6f2ce8146b6552b44e0d226be7638e7",
+          "title": "MISC"
+        },
+        {
+          "url": "https://www.openssl.org/news/secadv/20221213.txt",
+          "title": "MISC"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-12-14T15:59:43.422002Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2022-12-16T01:10:45.704008Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2022-12-21T11:02:20.568758Z"
+        }
+      ],
+      "description": "## NVD Description\n**_Note:_** _Versions mentioned in the description apply to the upstream `openssl` package._\n_See `How to fix?` for `Alpine:3.17` relevant versions._\n\nIf an X.509 certificate contains a malformed policy constraint and policy processing is enabled, then a write lock will be taken twice recursively. On some operating systems (most widely: Windows) this results in a denial of service when the affected process hangs. Policy processing being enabled on a publicly facing server is not considered to be a common setup. Policy processing is enabled by passing the `-policy&#39; argument to the command line utilities or by calling either `X509_VERIFY_PARAM_add0_policy()&#39; or `X509_VERIFY_PARAM_set1_policies()&#39; functions.\n## Remediation\nUpgrade `Alpine:3.17` `openssl` to version 3.0.7-r2 or higher.\n## References\n- [MISC](https://github.com/openssl/openssl/commit/7725e7bfe6f2ce8146b6552b44e0d226be7638e7)\n- [MISC](https://www.openssl.org/news/secadv/20221213.txt)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2022-3996"
+        ],
+        "CWE": [],
+        "ALTERNATIVE": []
+      },
+      "nvdSeverity": "high",
+      "packageName": "openssl",
+      "creationTime": "2023-01-04T14:36:48.104244Z",
+      "disclosureTime": "2022-12-13T16:15:00Z",
+      "packageManager": "alpine:3.17",
+      "publicationTime": "2023-01-04T14:36:48.069092Z",
+      "modificationTime": "2023-01-04T14:36:48.104268Z",
+      "socialTrendAlert": false,
+      "relativeImportance": null,
+      "severityWithCritical": "high",
+      "from": [
+        "docker-image|php@fpm-alpine3.17",
+        "openssl/openssl@3.0.7-r0"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "openssl/openssl",
+      "version": "3.0.7-r0",
+      "nearestFixedInVersion": "3.0.7-r2"
+    },
+    {
+      "id": "SNYK-ALPINE317-OPENSSL-3188632",
+      "cpes": [],
+      "title": "Improper Locking",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "credit": [
+        ""
+      ],
+      "semver": {
+        "vulnerable": [
+          "<3.0.7-r2"
+        ]
+      },
+      "exploit": "Not Defined",
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "linux",
+      "severity": "high",
+      "cvssScore": 7.5,
+      "malicious": false,
+      "references": [
+        {
+          "url": "https://github.com/openssl/openssl/commit/7725e7bfe6f2ce8146b6552b44e0d226be7638e7",
+          "title": "MISC"
+        },
+        {
+          "url": "https://www.openssl.org/news/secadv/20221213.txt",
+          "title": "MISC"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-12-14T15:59:43.422002Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2022-12-16T01:10:45.704008Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2022-12-21T11:02:20.568758Z"
+        }
+      ],
+      "description": "## NVD Description\n**_Note:_** _Versions mentioned in the description apply to the upstream `openssl` package._\n_See `How to fix?` for `Alpine:3.17` relevant versions._\n\nIf an X.509 certificate contains a malformed policy constraint and policy processing is enabled, then a write lock will be taken twice recursively. On some operating systems (most widely: Windows) this results in a denial of service when the affected process hangs. Policy processing being enabled on a publicly facing server is not considered to be a common setup. Policy processing is enabled by passing the `-policy&#39; argument to the command line utilities or by calling either `X509_VERIFY_PARAM_add0_policy()&#39; or `X509_VERIFY_PARAM_set1_policies()&#39; functions.\n## Remediation\nUpgrade `Alpine:3.17` `openssl` to version 3.0.7-r2 or higher.\n## References\n- [MISC](https://github.com/openssl/openssl/commit/7725e7bfe6f2ce8146b6552b44e0d226be7638e7)\n- [MISC](https://www.openssl.org/news/secadv/20221213.txt)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2022-3996"
+        ],
+        "CWE": [],
+        "ALTERNATIVE": []
+      },
+      "nvdSeverity": "high",
+      "packageName": "openssl",
+      "creationTime": "2023-01-04T14:36:48.104244Z",
+      "disclosureTime": "2022-12-13T16:15:00Z",
+      "packageManager": "alpine:3.17",
+      "publicationTime": "2023-01-04T14:36:48.069092Z",
+      "modificationTime": "2023-01-04T14:36:48.104268Z",
+      "socialTrendAlert": false,
+      "relativeImportance": null,
+      "severityWithCritical": "high",
+      "from": [
+        "docker-image|php@fpm-alpine3.17",
+        "ca-certificates/ca-certificates@20220614-r2",
+        "openssl/openssl@3.0.7-r0"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "openssl/openssl",
+      "version": "3.0.7-r0",
+      "nearestFixedInVersion": "3.0.7-r2"
+    },
+    {
+      "id": "SNYK-ALPINE317-OPENSSL-3188632",
+      "cpes": [],
+      "title": "Improper Locking",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "credit": [
+        ""
+      ],
+      "semver": {
+        "vulnerable": [
+          "<3.0.7-r2"
+        ]
+      },
+      "exploit": "Not Defined",
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "linux",
+      "severity": "high",
+      "cvssScore": 7.5,
+      "malicious": false,
+      "references": [
+        {
+          "url": "https://github.com/openssl/openssl/commit/7725e7bfe6f2ce8146b6552b44e0d226be7638e7",
+          "title": "MISC"
+        },
+        {
+          "url": "https://www.openssl.org/news/secadv/20221213.txt",
+          "title": "MISC"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-12-14T15:59:43.422002Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2022-12-16T01:10:45.704008Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2022-12-21T11:02:20.568758Z"
+        }
+      ],
+      "description": "## NVD Description\n**_Note:_** _Versions mentioned in the description apply to the upstream `openssl` package._\n_See `How to fix?` for `Alpine:3.17` relevant versions._\n\nIf an X.509 certificate contains a malformed policy constraint and policy processing is enabled, then a write lock will be taken twice recursively. On some operating systems (most widely: Windows) this results in a denial of service when the affected process hangs. Policy processing being enabled on a publicly facing server is not considered to be a common setup. Policy processing is enabled by passing the `-policy&#39; argument to the command line utilities or by calling either `X509_VERIFY_PARAM_add0_policy()&#39; or `X509_VERIFY_PARAM_set1_policies()&#39; functions.\n## Remediation\nUpgrade `Alpine:3.17` `openssl` to version 3.0.7-r2 or higher.\n## References\n- [MISC](https://github.com/openssl/openssl/commit/7725e7bfe6f2ce8146b6552b44e0d226be7638e7)\n- [MISC](https://www.openssl.org/news/secadv/20221213.txt)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2022-3996"
+        ],
+        "CWE": [],
+        "ALTERNATIVE": []
+      },
+      "nvdSeverity": "high",
+      "packageName": "openssl",
+      "creationTime": "2023-01-04T14:36:48.104244Z",
+      "disclosureTime": "2022-12-13T16:15:00Z",
+      "packageManager": "alpine:3.17",
+      "publicationTime": "2023-01-04T14:36:48.069092Z",
+      "modificationTime": "2023-01-04T14:36:48.104268Z",
+      "socialTrendAlert": false,
+      "relativeImportance": null,
+      "severityWithCritical": "high",
+      "from": [
+        "docker-image|php@fpm-alpine3.17",
+        "busybox/ssl_client@1.35.0-r29",
+        "openssl/libssl3@3.0.7-r2",
+        "openssl/openssl@3.0.7-r0"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "openssl/openssl",
+      "version": "3.0.7-r0",
+      "nearestFixedInVersion": "3.0.7-r2"
+    }
+  ],
+  "ok": false,
+  "dependencyCount": 34,
+  "policy": "# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.\nversion: v1.25.0\nignore: {}\npatch: {}\n",
+  "isPrivate": true,
+  "licensesPolicy": null,
+  "packageManager": "apk",
+  "ignoreSettings": {},
+  "docker": {},
+  "summary": "5 vulnerable dependency paths",
+  "filesystemPolicy": false,
+  "filtered": {
+    "ignore": [],
+    "patch": []
+  },
+  "uniqueCount": 3,
+  "projectName": "docker-image|php",
+  "platform": "linux/arm64",
+  "hasUnknownVersions": false,
+  "path": "php:fpm-alpine3.17"
+}
